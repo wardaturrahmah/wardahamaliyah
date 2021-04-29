@@ -8,9 +8,10 @@ export default function button({bg,color,value,border,width,height,radius,margin
 			border:border ? border : "none",
 			width:width,
 			height:height,
-			margin : margin ? margin : "10px",
+			margin : margin ,
 			borderRadius:radius ? radius : "10px",
-			padding : padding}}
+			padding : padding ? padding : "10px 20px"
+			}}
 		onClick={click}
 		>
 		{value}
