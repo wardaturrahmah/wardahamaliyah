@@ -1,5 +1,6 @@
 import Textk from "../components/atoms/text"
 import Buttonk from "../components/atoms/button"
+import Imagek from "../components/atoms/image"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Navbar,Nav,Form,FormControl} from 'react-bootstrap';
 import Hdr from "../components/organisms/hdr"
