@@ -12,6 +12,9 @@ export default function Home()
 {
   const router = useRouter();
   let star=star_list();
+  const handlecart= () => {
+  		router.push("/billing");
+  	};
   return (
     <>
     <Hdr />
@@ -42,10 +45,9 @@ export default function Home()
          {star.map((product, index) => {
          	return(
          	<>
-         	<Productk img={product.image[0]} name={product.name} category={product.category} price={product.price}/>
+         	<Productk img={product.image[0]} name={product.name} category={product.category} price={product.price} click={handlecart} />
          	</>
          	);
-          
       		})}
         </div>
         </center>

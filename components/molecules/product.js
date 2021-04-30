@@ -1,6 +1,6 @@
 import Imagek from "../atoms/image"
 import Textk from "../atoms/text"
-export default function product({name,category,price,img})
+export default function product({name,category,price,img,click})
 {
 	return (
 		<>
@@ -14,7 +14,7 @@ export default function product({name,category,price,img})
 			            	<Textk value={price} size="18px" weight="bold" />
 			          	</div>
 			          	<div className="col-md-4">
-			           		<img className="mr-4" src="/home/cart.png" />
+			           		<img className="mr-4" src="/home/cart.png" onClick={click}/>
 			          	</div>
 			        </div>
 			    </div>
