@@ -11,4 +11,14 @@ export const user =[
 	password:"123",
 
 }
-]
+];
+let luser="";
+export function check_login()
+{
+	return luser;
+}
+export function set_login(value)
+{
+	luser=value;
+	return luser;
+}

@@ -1,19 +1,16 @@
+import Textk from "../atoms/text";
 import { Button, Navbar,Nav,Form,FormControl} from 'react-bootstrap';
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { user,check_login,set_login } from "../variables/user";
 export default function hdr()
 {
 	const router = useRouter();
-  	const [luser, setLuser] = useState("");
   	const handlelogin= () => {
-  		if(luser=="")
+  		if(check_login()=="")
   		{
   			router.push("/signin");	
-  		}
-  		else
-  		{
-  			router.push("/");	
   		}
   	};
 	return(
@@ -33,6 +30,7 @@ export default function hdr()
 		    <Form inline>
 		     	<img className="mr-4" src="/home/cart.png" />
 		     	<img className="mr-4" src="/home/user.png" onClick={handlelogin} />
+		     	<Textk value={check_login()} color="white" name="mt-3"/>
 		    </Form>
 		  </Navbar>
 		);
