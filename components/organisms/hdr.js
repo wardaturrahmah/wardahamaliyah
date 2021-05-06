@@ -1,26 +1,21 @@
-import { Button, Navbar,Nav,Form,FormControl} from 'react-bootstrap';
 import Textk from "../atoms/text";
+import { Button, Navbar,Nav,Form,FormControl} from 'react-bootstrap';
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { user,check_login } from "../variables/user";
+import { user,check_login,set_login } from "../variables/user";
 export default function hdr()
 {
 	const router = useRouter();
-	const [luser, setluser] = useState(check_login());
-
   	const handlelogin= () => {
-  		let check = check_login();
-  		setluser(check_login());
-  		console.log(luser);
-  		if(luser!='')
-  		{
-  			router.push("/");
-  		}
-  		else
+  		if(check_login()=="")
   		{
   			router.push("/signin");	
   		}
+		else
+		{
+			
+		}
   	};
 	return(
 		 <Navbar variant="dark" style={{background:"#000"}}>
@@ -39,9 +34,7 @@ export default function hdr()
 		    <Form inline>
 		     	<img className="mr-4" src="/home/cart.png" />
 		     	<img className="mr-4" src="/home/user.png" onClick={handlelogin} />
-		     	 <Textk color="white" name='mt-3'
-              	  value={luser}
-              	/>
+		     	<Textk value={check_login()} color="white" name="mt-3"/>
 		    </Form>
 		  </Navbar>
 		);

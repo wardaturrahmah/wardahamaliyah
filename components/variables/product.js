@@ -1,3 +1,4 @@
+
 export const list_product = () => [
   {
     id: 1,
@@ -11,6 +12,7 @@ export const list_product = () => [
       "/products/star1.jpg",
     ],
     price: "Rp. 8.000",
+    stock:20
 },
 {
     id: 2,
@@ -24,6 +26,7 @@ export const list_product = () => [
       "/products/star2.jpg",
     ],
     price: "Rp. 46.500",
+    stock:20
 },
 {
     id: 3,
@@ -37,6 +40,7 @@ export const list_product = () => [
       "/products/star3.jpg",
     ],
     price: "Rp. 18.000",
+    stock:20
 },
 
 {
@@ -51,6 +55,7 @@ export const list_product = () => [
       "/products/star4.jpg",
     ],
     price: "Rp. 18.000",
+    stock:20
 },
 {
     id: 5,
@@ -64,6 +69,7 @@ export const list_product = () => [
       "/products/star1.jpg",
     ],
     price: "Rp. 8.000",
+    stock:20
 },
 {
     id: 6,
@@ -77,6 +83,7 @@ export const list_product = () => [
       "/products/star2.jpg",
     ],
     price: "Rp. 46.500",
+    stock:20
 },
 {
     id: 7,
@@ -90,6 +97,7 @@ export const list_product = () => [
       "/products/star3.jpg",
     ],
     price: "Rp. 18.000",
+    stock:20
 },
 
 {
@@ -104,5 +112,6 @@ export const list_product = () => [
       "/products/star4.jpg",
     ],
     price: "Rp. 18.000",
+    stock:20
 },
 ];

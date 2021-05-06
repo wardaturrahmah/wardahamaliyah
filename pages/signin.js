@@ -4,14 +4,14 @@ import Buttonk from "../components/atoms/button";
 import Inputk from "../components/molecules/input";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { user,set_login,check_login } from "../components/variables/user";
+import { user,check_login,set_login } from "../components/variables/user";
 import { useState } from "react";
 
 export default function signIn() {
   const router = useRouter();
+  const [luser, setLuser] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const handleChangeUsername = (e) => {
     setUsername(e.target.value);
   };
@@ -26,15 +26,13 @@ export default function signIn() {
     );
 
     if (check.length) {
-      //alert(check);
-      //alert("Login Success");
       set_login(username);
-      //console.log(check_login());
+      //alert("Login Success");
       router.push("/");
     } else if (username.length == 0) {
-      alert("Username Empty");
+      //alert("Username Empty");
     } else {
-      alert("Username/Password Wrong");
+      //alert("Username/Password Wrong");
     }
   };
 

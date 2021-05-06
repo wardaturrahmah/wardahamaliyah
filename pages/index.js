@@ -12,9 +12,10 @@ export default function Home()
 {
   const router = useRouter();
   let star=star_list();
+  
   const handlecart= () => {
-  		router.push("/billing");
-  	};
+      router.push("/billing");
+    };
   return (
     <>
     <Hdr />
@@ -39,16 +40,16 @@ export default function Home()
       <div className="mt-5 pt-5" style={{width:"100%",height:"512px",background:"#F9F9F9"}}>
         <center>
         <div className="row container">
-        	<Textk value="Best Seller products" size="30px" color="#024aca" weight="bold" />
+          <Textk value="Best Seller products" size="30px" color="#024aca" weight="bold" />
         </div>
         <div className="row container">
          {star.map((product, index) => {
-         	return(
-         	<>
-         	<Productk img={product.image[0]} name={product.name} category={product.category} price={product.price} click={handlecart} />
-         	</>
-         	);
-      		})}
+          return(
+          <>
+            <Productk img={product.image[0]} name={product.name} category={product.category} price={product.price} index={index} click={handlecart} go="/product/[id]" />
+          </>
+          );
+          })}
         </div>
         </center>
       </div>
