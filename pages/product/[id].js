@@ -16,7 +16,7 @@ export default function detail() {
   var stock="0";
   var price="0";
   image1="";
-  image2"";
+  image2="";
   if(router.query.id)
   {
     const product=products[router.query.id];
