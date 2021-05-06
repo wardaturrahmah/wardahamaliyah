@@ -12,7 +12,7 @@ export const list_product = () => [
       "/products/star1.jpg",
     ],
     price: "Rp. 8.000",
-    stock:20
+    stock:21
 },
 {
     id: 2,
