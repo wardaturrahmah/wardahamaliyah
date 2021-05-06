@@ -12,6 +12,10 @@ export default function hdr()
   		{
   			router.push("/signin");	
   		}
+		else
+		{
+			
+		}
   	};
 	return(
 		 <Navbar variant="dark" style={{background:"#000"}}>
