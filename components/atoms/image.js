@@ -9,11 +9,11 @@ export default function image({
   radius,
   name,
   padding,
-  id
+  aidi
 }) {
   return (
     <>
-      <div className={name} id={id}
+      <div className={name} id={aidi}
         style={{
           border: border ? border : "solid thin #eee",
           height: height ? height : "100px",
