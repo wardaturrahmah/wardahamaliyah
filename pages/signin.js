@@ -12,7 +12,6 @@ export default function signIn() {
   const [luser, setLuser] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const handleChangeUsername = (e) => {
     setUsername(e.target.value);
   };
