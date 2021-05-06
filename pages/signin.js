@@ -4,12 +4,11 @@ import Buttonk from "../components/atoms/button";
 import Inputk from "../components/molecules/input";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { user } from "../components/variables/user";
+import { user,set_login,check_login } from "../components/variables/user";
 import { useState } from "react";
 
 export default function signIn() {
   const router = useRouter();
-  const [luser, setLuser] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,9 +26,10 @@ export default function signIn() {
     );
 
     if (check.length) {
-      setLuser(username);
-      console.log(luser);
-      alert("Login Success");
+      //alert(check);
+      //alert("Login Success");
+      set_login(username);
+      //console.log(check_login());
       router.push("/");
     } else if (username.length == 0) {
       alert("Username Empty");
