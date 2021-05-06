@@ -46,7 +46,9 @@ export default function Home()
          {star.map((product, index) => {
           return(
           <>
-            <Productk img={product.image[0]} name={product.name} category={product.category} price={product.price} index={index} click={handlecart} go="/product/[id]" />
+            
+            <Productk img={product.image[0]} name={product.name} category={product.category} price={product.price} index={index} aidi={product.id} click={handlecart} go="/product/[id]"/>
+            
           </>
           );
           })}

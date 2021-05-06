@@ -18,6 +18,8 @@ export default function hdr()
 		}
   	};
 	return(
+		<>
+		
 		 <Navbar variant="dark" style={{background:"#000"}}>
 		    <Link href="/">
 		    <Navbar.Brand href="#home"><img src="/home/ic.jpg" height="30px"/></Navbar.Brand>
@@ -37,6 +39,7 @@ export default function hdr()
 		     	<Textk value={check_login()} color="white" name="mt-3"/>
 		    </Form>
 		  </Navbar>
+		  </>
 		);
 
 }
