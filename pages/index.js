@@ -12,6 +12,7 @@ export default function Home()
 {
   const router = useRouter();
   let star=star_list();
+  
   const handlecart= () => {
   		router.push("/billing");
   	};
