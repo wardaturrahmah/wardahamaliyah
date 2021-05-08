@@ -7,14 +7,34 @@ import { Button, Navbar,Nav,Form,FormControl} from 'react-bootstrap';
 import Hdr from "../components/organisms/hdr";
 import {star_list} from "../components/variables/star_list";
 import { useRouter } from "next/router";
+import { listCart } from "../components/variables/product";
+import { user,check_login,set_login } from "../components/variables/user";
+
+
 import Link from "next/link";
 export default function Home()
 {
   const router = useRouter();
   let star=star_list();
   
-  const handlecart= () => {
-      router.push("/billing");
+  const handlecart= (e) => {
+      //console.log(e.target.id);
+      if(check_login()=="")
+      {
+        router.push("/signin"); 
+      }
+      else
+      {
+        let cart = {
+          username:check_login(),
+          product:e.target.id,
+          qty:1
+        }
+        listCart.push(cart);
+        console.log(listCart);
+      }
+    
+      //router.push("/billing");
     };
   return (
     <>

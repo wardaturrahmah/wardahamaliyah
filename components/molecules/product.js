@@ -27,7 +27,7 @@ export default function product({name,category,price,img,index,click,go,aidi})
 			         	   	<Textk value={price} size="18px" weight="bold" />
 			          	</div>
 			          	<div className="col-md-4">
-			           		<img id={index} className="mr-4" src="/home/cart.png" onClick={click}/>
+			           		<img id={name} className="mr-4" src="/home/cart.png" onClick={click}/>
 			          	</div>
 			        </div>
 			</div>

@@ -115,3 +115,4 @@ export const list_product = () => [
     stock:20
 },
 ];
+export const listCart = [];
