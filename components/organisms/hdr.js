@@ -12,7 +12,7 @@ export default function hdr()
 {
 	let cart=listCart;
 	let jum=cart.length;
-	let product=list_product();
+	let product=list_product;
 	const router = useRouter();
   	const handlelogin= () => {
   		if(check_login()=="")
